@@ -27,10 +27,11 @@ export default class ChatInput
     if (message) {
       this.props.onSubmit(message);
       this.setState({ message: "" }, () => {
-        const container = document.getElementById('container');
-          
-        if(container)
-          container.scrollTop = 1000
+        const container = document.getElementById("container");
+
+        if (container) {
+          container.scrollTop = 1000;
+        }
       });
     }
   };

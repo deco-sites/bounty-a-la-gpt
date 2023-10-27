@@ -46,10 +46,11 @@ export default class App extends Component {
           chatHistory: [...updatedChatHistory, botMessage],
           isLoading: false,
         }, () => {
-          const container = document.getElementById('container');
-          
-          if(container)
-            container.scrollTop = 1000
+          const container = document.getElementById("container");
+
+          if (container) {
+            container.scrollTop = 1000;
+          }
         });
       })
       .catch((error) => {
@@ -69,7 +70,7 @@ export default class App extends Component {
 
     return (
       <div id="chat" class="hidden flex-col justify-between">
-        <div id={'container'} class="mb-4 h-[50vh] overflow-scroll">
+        <div id={"container"} class="mb-4 h-[50vh] overflow-scroll">
           <div class="chat-box">
             {chatHistory.map((message, index) => (
               <div
