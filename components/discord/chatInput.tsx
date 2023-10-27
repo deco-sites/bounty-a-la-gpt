@@ -26,7 +26,12 @@ export default class ChatInput
     const { message } = this.state;
     if (message) {
       this.props.onSubmit(message);
-      this.setState({ message: "" });
+      this.setState({ message: "" }, () => {
+        const container = document.getElementById('container');
+          
+        if(container)
+          container.scrollTop = 1000
+      });
     }
   };
 
@@ -42,7 +47,7 @@ export default class ChatInput
         <input
           type="text"
           id="input-chat"
-          class="border border-[#C6C6C6] px-5 py-[15px] rounded-2xl w-full"
+          class="border border-[#C6C6C6] px-5 pr-[60px] py-[15px] rounded-2xl w-full"
           placeholder="Type message"
           value={this.state.message}
           onInput={this.handleMessageChange}

@@ -1,6 +1,7 @@
 import { Component, h } from "preact";
 import ChatInput from "./chatInput.tsx";
 import { useUI } from "deco-sites/bounty-a-la-gpt/sdk/useUI.ts";
+import { useRef } from "https://esm.sh/preact@10.15.1/hooks";
 
 export default class App extends Component {
   state = {
@@ -44,6 +45,11 @@ export default class App extends Component {
         this.setState({
           chatHistory: [...updatedChatHistory, botMessage],
           isLoading: false,
+        }, () => {
+          const container = document.getElementById('container');
+          
+          if(container)
+            container.scrollTop = 1000
         });
       })
       .catch((error) => {
@@ -63,7 +69,7 @@ export default class App extends Component {
 
     return (
       <div id="chat" class="hidden flex-col justify-between">
-        <div class="mb-4 h-[50vh] overflow-scroll">
+        <div id={'container'} class="mb-4 h-[50vh] overflow-scroll">
           <div class="chat-box">
             {chatHistory.map((message, index) => (
               <div
