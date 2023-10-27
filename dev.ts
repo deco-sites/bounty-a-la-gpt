@@ -1,7 +1,7 @@
 #!/usr/bin/env -S deno run -A --watch
 import dev from "$live/dev.ts";
 import tailwind from "deco-sites/std/tailwindv3.ts";
-import daisyui from "npm:daisyui@2.51.6";
+import daisyui from "npm:daisyui@3.5.0";
 import tailwindConfig from "./tailwind.config.ts";
 import site from "./site.json" assert { type: "json" };
 
