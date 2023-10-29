@@ -8,10 +8,10 @@ import * as $$$$$0 from "./islands/ButtonMenu.tsx";
 import * as $$$$$1 from "./islands/ButtonTips.tsx";
 import * as $$$$$2 from "./islands/ModalMenu.tsx";
 import * as $$$$$3 from "./islands/request.tsx";
-import * as $$$$$$$$0 from "./sections/Footer.tsx";
-import * as $$$$$$$$1 from "./sections/Header.tsx";
-import * as $$$$$$$$2 from "./sections/Hero.tsx";
-import * as $$$$$$$$3 from "./sections/ParagraphList.tsx";
+import * as $$$$$$$$0 from "./sections/BotBounty.tsx";
+import * as $$$$$$$$1 from "./sections/Footer.tsx";
+import * as $$$$$$$$2 from "./sections/Header.tsx";
+import * as $$$$$$$$3 from "./sections/Hero.tsx";
 import * as $$$$$$$$4 from "./sections/SimpleTextList.tsx";
 import * as $$$$$$$$5 from "./sections/Theme.tsx";
 import * as $$$$$$$$6 from "./sections/Tips.tsx";
@@ -169,10 +169,10 @@ const manifest = {
     "$live/sections/PageInclude.tsx": i2$$$$$2,
     "$live/sections/Slot.tsx": i2$$$$$3,
     "$live/sections/UseSlot.tsx": i2$$$$$4,
-    "deco-sites/bounty-a-la-gpt/sections/Footer.tsx": $$$$$$$$0,
-    "deco-sites/bounty-a-la-gpt/sections/Header.tsx": $$$$$$$$1,
-    "deco-sites/bounty-a-la-gpt/sections/Hero.tsx": $$$$$$$$2,
-    "deco-sites/bounty-a-la-gpt/sections/ParagraphList.tsx": $$$$$$$$3,
+    "deco-sites/bounty-a-la-gpt/sections/BotBounty.tsx": $$$$$$$$0,
+    "deco-sites/bounty-a-la-gpt/sections/Footer.tsx": $$$$$$$$1,
+    "deco-sites/bounty-a-la-gpt/sections/Header.tsx": $$$$$$$$2,
+    "deco-sites/bounty-a-la-gpt/sections/Hero.tsx": $$$$$$$$3,
     "deco-sites/bounty-a-la-gpt/sections/SimpleTextList.tsx": $$$$$$$$4,
     "deco-sites/bounty-a-la-gpt/sections/Theme.tsx": $$$$$$$$5,
     "deco-sites/bounty-a-la-gpt/sections/Tips.tsx": $$$$$$$$6,
