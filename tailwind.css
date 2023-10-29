@@ -42,4 +42,13 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+  .button-menu{
+    padding: 10px;
+    border: 1px solid #0A2121;
+    border-radius: 8px;
+  }
+  body{
+    background-color: #F3FFF9;
+    min-height: 100vh;
+  }
 }

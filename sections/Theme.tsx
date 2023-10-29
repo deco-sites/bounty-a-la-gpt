@@ -18,7 +18,7 @@ export interface MainColors {
   /**
    * @format color
    * @title Primary
-   * @default #003232
+   * @default #0A2121
    */
   "primary": string;
   /**
