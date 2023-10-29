@@ -42,6 +42,17 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+  .scrollbar-chat::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+  .scrollbar-chat::-webkit-scrollbar-track {
+    background: #0A2121;        /* color of the tracking area */
+  }
+  
+  .scrollbar-chat::-webkit-scrollbar-thumb {
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
   .button-menu{
     padding: 10px;
     border: 1px solid #0A2121;
