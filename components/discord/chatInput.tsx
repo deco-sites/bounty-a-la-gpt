@@ -44,7 +44,7 @@ export default class ChatInput
 
   render() {
     return (
-      <div class="flex px-6 relative">
+      <div class="flex px-6 relative lg:w-[760px] lg:mx-auto">
         <input
           type="text"
           id="input-chat"

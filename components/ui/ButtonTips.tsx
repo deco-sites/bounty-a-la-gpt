@@ -16,7 +16,7 @@ export default function ButtonTips() {
 
   return (
     <button
-      class={`bg-primary px-6 py-3 rounded-[4px] text-white w-[190px]`}
+      class={`bg-primary px-6 py-3 rounded-[4px] text-white w-[190px] lg:mt-2`}
       onClick={() => {
         displayChat();
         initChatBot.value = true;

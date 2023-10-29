@@ -1,8 +1,7 @@
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
-import ButtonMenu from "deco-sites/bounty-a-la-gpt/components/header/ButtonMenu.tsx";
 import ButtonHome from "deco-sites/bounty-a-la-gpt/components/header/ButtonHome.tsx";
-import ModalMenu from "deco-sites/bounty-a-la-gpt/components/header/ModalMenu.tsx";
+import ButtonLinks from "deco-sites/bounty-a-la-gpt/components/header/ButtonLinks.tsx";
 
 interface Logo {
   image: LiveImage;
@@ -20,11 +19,11 @@ export interface Props {
   links: Links[];
 }
 
-export default function Menu({ logo, links }: Props) {
+export default function NavDesktop({ logo, links }: Props) {
   return (
     <>
-      <div class={`flex lg:hidden items-center justify-between px-6 pt-8`}>
-        <ButtonMenu />
+      <div class={`hidden lg:flex items-center justify-center px-6 pt-8 max-w-[1440px] mx-auto relative`}>
+        <ButtonHome style={"absolute left-6"}/>  
         <div>
           <a
             href={logo?.href ?? "#"}
@@ -52,9 +51,8 @@ export default function Menu({ logo, links }: Props) {
             </Picture>
           </a>
         </div>
-        <ButtonHome />
+      <ButtonLinks links={links} style={"absolute right-6"}/>
       </div>
-      <ModalMenu links={links} />
     </>
   );
 }

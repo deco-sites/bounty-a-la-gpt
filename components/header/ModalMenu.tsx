@@ -1,5 +1,6 @@
 import Icon from "deco-sites/bounty-a-la-gpt/components/ui/Icon.tsx";
 import { useUI } from "deco-sites/bounty-a-la-gpt/sdk/useUI.ts";
+import ButtonLinks from "deco-sites/bounty-a-la-gpt/components/header/ButtonLinks.tsx";
 
 interface Links {
   label: string;
@@ -32,17 +33,7 @@ export default function ModalMenu({ links }: Props) {
           <Icon id="XMark" size={28} strokeWidth={1} />
         </div>
       </div>
-      <div>
-        <ul class={`flex flex-col p-6`}>
-          {links?.map((link) => {
-            return (
-              <li class={`px-6 py-3`}>
-                <a href={link.href} class={`text-base`}>{link.label}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <ButtonLinks links={links} style={"flex-col m-6"}/>
     </div>
   );
 }
