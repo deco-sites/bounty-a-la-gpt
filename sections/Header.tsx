@@ -22,7 +22,7 @@ function Header({ logo, links }: Props) {
   return (
     <header class={`bg-secondary`}>
       <Menu logo={logo} links={links} />
-      <NavDesktop logo={logo} links={links}/>
+      <NavDesktop logo={logo} links={links} />
     </header>
   );
 }

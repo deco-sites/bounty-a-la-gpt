@@ -11,7 +11,9 @@ export default function ParagraphList({ title, cards }: Props) {
   return (
     <>
       <div class={`bg-secondary`}>
-        <h1 class={`text-2xl text-primary text-center mt-8 mb-6 lg:m-[64px]`}>{title}</h1>
+        <h1 class={`text-2xl text-primary text-center mt-8 mb-6 lg:m-[64px]`}>
+          {title}
+        </h1>
         <App />
         <Tips description={cards} />
       </div>

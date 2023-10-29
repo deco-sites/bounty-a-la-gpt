@@ -33,7 +33,7 @@ export default function ModalMenu({ links }: Props) {
           <Icon id="XMark" size={28} strokeWidth={1} />
         </div>
       </div>
-      <ButtonLinks links={links} style={"flex-col m-6"}/>
+      <ButtonLinks links={links} style={"flex-col m-6"} />
     </div>
   );
 }

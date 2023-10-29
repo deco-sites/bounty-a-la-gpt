@@ -11,7 +11,10 @@ export default function Tips({ description }: Props) {
   const { displayMenu } = useUI();
 
   return (
-    <div id="tips" class={`flex flex-col items-center justify-center max-w-[760px] mx-auto lg:mb-[100px]`}>
+    <div
+      id="tips"
+      class={`flex flex-col items-center justify-center max-w-[760px] mx-auto lg:mb-[100px]`}
+    >
       <div class={`flex flex-col justify-center items-center px-6 gap-6`}>
         <div class={`flex flex-col gap-2`}>
           <Icon id="Idea" size={24} strokeWidth={1} />

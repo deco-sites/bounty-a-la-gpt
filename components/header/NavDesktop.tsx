@@ -22,8 +22,10 @@ export interface Props {
 export default function NavDesktop({ logo, links }: Props) {
   return (
     <>
-      <div class={`hidden lg:flex items-center justify-center px-6 pt-8 max-w-[1440px] mx-auto relative`}>
-        <ButtonHome style={"absolute left-6"}/>  
+      <div
+        class={`hidden lg:flex items-center justify-center px-6 pt-8 max-w-[1440px] mx-auto relative`}
+      >
+        <ButtonHome style={"absolute left-6"} />
         <div>
           <a
             href={logo?.href ?? "#"}
@@ -51,7 +53,7 @@ export default function NavDesktop({ logo, links }: Props) {
             </Picture>
           </a>
         </div>
-      <ButtonLinks links={links} style={"absolute right-6"}/>
+        <ButtonLinks links={links} style={"absolute right-6"} />
       </div>
     </>
   );
