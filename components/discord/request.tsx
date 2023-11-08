@@ -1,20 +1,17 @@
 import { Component, h } from "preact";
 import ChatInput from "./chatInput.tsx";
 import { useUI } from "deco-sites/bounty-a-la-gpt/sdk/useUI.ts";
-import { useRef } from "https://esm.sh/preact@10.15.1/hooks";
+import type { Image as DecoImage } from "deco-sites/std/components/types.ts";
 
-export default class App extends Component {
+interface Props {
+  iconBounty: DecoImage;
+  iconUser: DecoImage;
+}
+export default class App extends Component<Props> {
   state = {
     chatHistory: [],
     isLoading: false,
   };
-
-  getCurrentTime() {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, "0");
-    const minutes = now.getMinutes().toString().padStart(2, "0");
-    return `${hours}:${minutes}`;
-  }
 
   sendMessage = (message: string) => {
     const { chatHistory } = this.state;
@@ -72,7 +69,7 @@ export default class App extends Component {
       <div id="chat" class="hidden flex-col justify-between">
         <div
           id={"container"}
-          class="mb-4 h-[50vh] overflow-y-scroll .scrollbar-chat"
+          class="mb-4 lg:mx-auto lg:max-w-[870px] lg:w-full h-[50vh] overflow-y-scroll scrollbar-chat"
         >
           <div class="chat-box">
             {chatHistory.map((message, index) => (
@@ -82,7 +79,39 @@ export default class App extends Component {
                   ? "user-message bg-white px-6 py-4 border border-[#C6C6C6]/50 text-right"
                   : "bot-message px-6 py-4 border border-[#C6C6C6]/50 text-left"}
               >
-                {message}
+                {index % 2 == 0
+                  ? (
+                    <>
+                      <div class={`flex items-center gap-4 flex-row-reverse`}>
+                        <img
+                          class="object-cover w-8 h-8 rounded-full"
+                          src={this.props.iconUser}
+                          alt={"Foto do usuário"}
+                        />
+                        <div class={`flex flex-col`}>
+                          <span class={`font-bold text-primary`}>Você</span>
+                          {message}
+                        </div>
+                      </div>
+                    </>
+                  )
+                  : (
+                    <>
+                      <div class={`flex items-center gap-4`}>
+                        <img
+                          class="object-cover w-8 h-8 rounded-full"
+                          src={this.props.iconBounty}
+                          alt={"Foto do BotBounty"}
+                        />
+                        <div class={`flex flex-col`}>
+                          <span class={`font-bold text-primary`}>
+                            Bounty Bot
+                          </span>
+                          {message}
+                        </div>
+                      </div>
+                    </>
+                  )}
               </div>
             ))}
           </div>
