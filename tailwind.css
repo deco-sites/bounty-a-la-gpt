@@ -43,14 +43,11 @@
     display: none;
   }
   .scrollbar-chat::-webkit-scrollbar {
-    width: 12px; 
-  }
-  
-  .scrollbar-chat::-webkit-scrollbar-track {
-    background: #0A2121;        /* color of the tracking area */
+    width: 7px; 
   }
   
   .scrollbar-chat::-webkit-scrollbar-thumb {
+    background: #0A2121;
     border-radius: 20px;       /* roundness of the scroll thumb */
   }
   .button-menu{
