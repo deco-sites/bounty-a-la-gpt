@@ -2,7 +2,7 @@ import { Component, h } from "preact";
 import ChatInput from "./chatInput.tsx";
 import { useUI } from "deco-sites/bounty-a-la-gpt/sdk/useUI.ts";
 import type { Image as DecoImage } from "deco-sites/std/components/types.ts";
-import Markdown from "deco-sites/std/components/Markdown.tsx"
+import Markdown from "deco-sites/std/components/Markdown.tsx";
 
 interface Props {
   iconBounty: DecoImage;
@@ -91,7 +91,7 @@ export default class App extends Component<Props> {
                         />
                         <div class={`flex flex-col`}>
                           <span class={`font-bold text-primary`}>Você</span>
-                          <Markdown text={message}/>
+                          <Markdown text={message} />
                         </div>
                       </div>
                     </>
@@ -108,7 +108,7 @@ export default class App extends Component<Props> {
                           <span class={`font-bold text-primary`}>
                             Bounty Bot
                           </span>
-                          <Markdown text={message}/>
+                          <Markdown text={message} />
                         </div>
                       </div>
                     </>
