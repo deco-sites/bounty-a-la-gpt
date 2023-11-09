@@ -7,10 +7,12 @@ import { signal } from "@preact/signals";
 
 const displayMenu = signal(false);
 const initChatBot = signal(false);
+const refreshBot = signal(false);
 
 const state = {
   displayMenu,
   initChatBot,
+  refreshBot,
 };
 
 export const useUI = () => state;

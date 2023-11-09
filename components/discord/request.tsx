@@ -38,7 +38,8 @@ export default class App extends Component<Props> {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        const { refreshBot } = useUI();
+
         const botMessage = `${data.response}`;
         this.setState({
           chatHistory: [...updatedChatHistory, botMessage],
@@ -47,7 +48,10 @@ export default class App extends Component<Props> {
           const container = document.getElementById("container");
 
           if (container) {
-            container.scrollTop = 1000;
+            container.scrollTop = 100000;
+          }
+          if (data.bountyPostada) {
+            refreshBot.value = true;
           }
         });
       })
@@ -70,7 +74,7 @@ export default class App extends Component<Props> {
       <div id="chat" class="hidden flex-col justify-between">
         <div
           id={"container"}
-          class="mb-4 lg:mx-auto lg:max-w-[870px] lg:w-full h-[50vh] overflow-y-scroll scrollbar-chat"
+          class="mb-4 lg:mx-auto lg:max-w-[870px] lg:w-full h-[55vh] overflow-y-scroll scrollbar-chat"
         >
           <div class="chat-box">
             {chatHistory.map((message, index) => (
