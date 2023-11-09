@@ -10,7 +10,6 @@ export default function ButtonMenu() {
         class={`button-menu`}
         onClick={() => {
           displayMenu.value = !displayMenu.value;
-          console.log(displayMenu.value);
         }}
       >
         <Icon id="Bars3" size={24} strokeWidth={1} />
