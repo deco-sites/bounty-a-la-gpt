@@ -1,8 +1,0 @@
-{
-  "siteId": 2731,
-  "namespace": "deco-sites/bounty-a-la-gpt",
-  "imports": [
-    "$live/live.gen.ts",
-    "deco-sites/std/live.gen.ts"
-  ]
-}
